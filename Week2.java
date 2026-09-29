@@ -64,7 +64,7 @@ public class Week2 {
     public static void displayTable(String[] stops, int[] waiting, int[] alighting, int[]current){
         System.out.println();
         System.out.println("--------ROUTE TABLE--------");
-        System.out.println("SN\tB\tA\tCO"); // Stop Name-Boarding-Alighting-Current Occupancy
+        System.out.println("SN\tB\tA\tCO"); 
         
         for(int i = 0; i < stops.length; i++){
             System.out.println(stops[i] + "\t" + waiting[i] + "\t" + alighting[i] + "\t" + current[i]);

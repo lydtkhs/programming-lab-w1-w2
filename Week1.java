@@ -16,8 +16,8 @@ public class Week1 {
         }
         System.out.println();
         
-        int[][] stats = new int[4][5]; //0:win,1:draw,2:loss,3:goal diff,4:pts
-        int scores[][] = new int[6][2];
+        int[][] stats = new int[4][5]; //0 win,1 draw,2 loss,3 goal diff,4 pts 
+        int scores[][] = new int[6][2]; //its not ai's note mine btw :(
                
         for(int i = 0; i < 6; i++){
             int h = matches[i][0];
@@ -39,22 +39,22 @@ public class Week1 {
     }
     
     public static void updateMatch(int[][] s, int h, int a,int hg, int ag){
-        s[h][3] += (hg - ag); //goal diff
+        s[h][3] += (hg - ag); 
         s[a][3] += (ag - hg);
         
         if(hg > ag){
             s[h][0]++;
             s[a][2]++ ; 
-            s[h][4]+= 3; // win loss
+            s[h][4]+= 3; 
         } else if (ag > hg){
             s[a][0]++;
             s[h][2]++;
-            s[a][4]+= 3; //loss win
+            s[a][4]+= 3; 
         } else {
             s[h][1]++;
             s[a][1]++;
             s[h][4]++;
-            s[a][4]++; //draw
+            s[a][4]++; 
         }
     }
     
